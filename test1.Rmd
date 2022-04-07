@@ -1,7 +1,7 @@
 ---
 title: "Example_Markdown"
 author: "CC"
-output: html_document
+output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
@@ -9,11 +9,17 @@ knitr::opts_chunk$set(echo=TRUE)
 
 ```
 
-My *first* version controlled project (through Git) using RStudio.
+Making some changes to the markdown file to showcase how version control works.
 
 Test plot
 
 ```{r, test-plot}
-plot(cars)
+plot(cars, col="red", xlab="speed (mph)", ylab = "distance (miles)")
+```
+
+A summary of the data
+```{r, cars-summary}
+library(knitr)
+kable(summary(cars))
 ```
 
